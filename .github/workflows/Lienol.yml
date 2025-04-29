@@ -194,7 +194,8 @@ jobs:
     
     - name: SSH远程连接（make menuconfig）
       if: env.SSH_ACTION == 'true'
-      uses: danshui-git/debugger-action@main
+      #uses: danshui-git/debugger-action@main
+      uses: mxschmitt/action-tmate@v3
 
     - name: 生成"${{ matrix.target }}"配置文件
       if: env.REPO_TOKEN
