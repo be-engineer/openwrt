@@ -15,8 +15,6 @@ on:
         options:
           - 'openwrt-23.05'
           - 'openwrt-21.02'
-          - 'openwrt-18.06'
-          - 'openwrt-18.06-k5.4'
           - 'master'
       CONFIG_FILE:
         description: '请选择[seed文件夹内]的配置文件'
@@ -26,6 +24,7 @@ on:
         options:
           - 'x86_64'
           - 'aarch64'
+          - 'ac2100'
       CPU_SELECTION:
         description: 'CPU优选,增加编译速度'
         required: true
@@ -39,7 +38,7 @@ on:
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
-        default: 'Telegram'
+        default: '关闭'
         type: choice
         options:
           - '关闭'
@@ -68,7 +67,7 @@ on:
       UPDATE_FIRMWARE_ONLINE:
         description: '增加在线更新固件功能/自动打包Amlogic_Rockchip系列固件'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       COMPILATION_INFORMATION:
         description: '是否显示编译信息'
